@@ -16,20 +16,26 @@
 <body>
     <div class="weather-app">
         <header>
-            <form>
-                <input type="search" placeholder="Enter a city.." required />
-                <input type="submit" value="search" />
+            <form class="search-form">
+                <input type="search" placeholder="Enter a city.." required class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
             </form>
         </header>
         <main>
-            <div>
-                <h1>Cape Town</h1>
-                <p>Saturdey 21:10, Partly cloudy
-                    <br />
-                    Humidity: 85%, wind: 22km/h
-                </p>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city">Cape Town</h1>
+                    <p class="weather-app-details">Saturdey 21:10, Partly cloudy
+                        <br />
+                        Humidity: <strong>85%</strong>, wind: <strong>22km/h</strong>
+                    </p>
+                </div>
+                <div class="weather-app-temp-details">
+                    <span class="weather-app-icon">☁️</span>
+                    <span class="weather-app-temp"> 21</span>
+                    <span class="weather-app-unit">°C</span>
+                </div>
             </div>
-            <div>☁️ 21°C</div>
         </main>
         <footer>Coded by
             <a href="https://github.com/templehues" target="_blank">Huey</a> and is open-sourced on <a
