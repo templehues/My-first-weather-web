@@ -1,3 +1,13 @@
 body {
-  background-color: #416c9a;
+  background-color: #f5d39c;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+}
+.weather-app {
+  background-color: #f46278;
+  max-width: 600px;
+  margin: 30 auto;
+  padding: 30px;
+  box-shadow: 0 30px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
 }
