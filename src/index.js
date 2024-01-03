@@ -52,8 +52,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let days = ["Wed", "Thu", "Fri", "Sun", "Mon"];
+function getForecast(city) {
+  let apiKey = "1of0t314d94be2d47af94e3feebe0e6d";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -79,4 +86,5 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cape Town");
+getForecast("CapeTown");
 displayForecast();
